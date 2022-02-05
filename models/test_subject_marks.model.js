@@ -11,23 +11,23 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Test_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Subject_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			User_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Marks_Obtained: {
-				type: Sequelize.FLOAT,
+				type: DataTypes.FLOAT,
 				allowNull: true,
 			},
 			Marks_Out_Off: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: true,
 			},
 		},

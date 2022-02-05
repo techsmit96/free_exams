@@ -11,60 +11,60 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Type: {
-				type: Sequelize.ENUM('Single', 'Multiple'),
+				type: DataTypes.ENUM('Single', 'Multiple'),
 				allowNull: false,
 				defaultValue: 'Single',
 			},
 			Subject_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Question: {
-				type: Sequelize.TEXT,
+				type: DataTypes.TEXT,
 				allowNull: false,
 			},
 			Option_A: {
-				type: Sequelize.TEXT,
+				type: DataTypes.TEXT,
 				allowNull: true,
 			},
 			Option_B: {
-				type: Sequelize.TEXT,
+				type: DataTypes.TEXT,
 				allowNull: true,
 			},
 			Option_C: {
-				type: Sequelize.TEXT,
+				type: DataTypes.TEXT,
 				allowNull: true,
 			},
 			Option_D: {
-				type: Sequelize.TEXT,
+				type: DataTypes.TEXT,
 				allowNull: true,
 			},
 			Correct_Option: {
-				type: Sequelize.STRING,
+				type: DataTypes.STRING,
 				allowNull: true,
 			},
 			Correct_Score: {
-				type: Sequelize.FLOAT,
+				type: DataTypes.FLOAT,
 				allowNull: false,
 			},
 			Not_Attempt: {
-				type: Sequelize.FLOAT,
+				type: DataTypes.FLOAT,
 				allowNull: false,
 			},
 			Wrong_Score: {
-				type: Sequelize.FLOAT,
+				type: DataTypes.FLOAT,
 				allowNull: false,
 			},
 			Explanation: {
-				type: Sequelize.TEXT,
+				type: DataTypes.TEXT,
 				allowNull: true,
 			},
 			Difficulty_Level: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Status: {
-				type: Sequelize.ENUM('Active', 'In Active'),
+				type: DataTypes.ENUM('Active', 'In Active'),
 				allowNull: false,
 				defaultValue: 'Active',
 			},

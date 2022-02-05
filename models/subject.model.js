@@ -21,11 +21,11 @@ module.exports = (sequelize, DataTypes) => {
 				unique: true,
 			},
 			Description: {
-				type: Sequelize.STRING(50),
+				type: DataTypes.STRING(50),
 				allowNull: true,
 			},
 			Status: {
-				type: Sequelize.ENUM('Active', 'In Active'),
+				type: DataTypes.ENUM('Active', 'In Active'),
 				allowNull: false,
 				defaultValue: 'Active',
 			},

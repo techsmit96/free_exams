@@ -11,32 +11,32 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Test_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			User_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Question_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Answer: {
-				type: Sequelize.STRING,
+				type: DataTypes.STRING,
 				allowNull: true,
 			},
 			Correct_Answer: {
-				type: Sequelize.STRING,
+				type: DataTypes.STRING,
 				allowNull: true,
 			},
 			For_Review_Flag: {
-				type: Sequelize.BOOLEAN,
+				type: DataTypes.BOOLEAN,
 				allowNull: true,
 				defaultValue: 0,
 			},
 			For_Seen_Flag: {
-				type: Sequelize.BOOLEAN,
+				type: DataTypes.BOOLEAN,
 				allowNull: true,
 				defaultValue: 0,
 			},

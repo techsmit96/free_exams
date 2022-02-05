@@ -11,19 +11,19 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Test_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Subject_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Difficulty_Level: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			No_Of_Question: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 		},

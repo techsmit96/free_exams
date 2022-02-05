@@ -11,55 +11,55 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Test_Name: {
-				type: Sequelize.STRING(100),
+				type: DataTypes.STRING(100),
 				allowNull: false,
 				unique: true,
 			},
 			Total_No_Of_Question: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},		
 			Enrolled: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: true,
 			},
 			Total_Time: {
-				type: Sequelize.STRING(100),
+				type: DataTypes.STRING(100),
 				allowNull: false,
 			},
 			Start_Time: {
-				type: Sequelize.DATE,
+				type: DataTypes.DATE,
 				allowNull: false,
 			},
 			End_Time: {
-				type: Sequelize.DATE,
+				type: DataTypes.DATE,
 				allowNull: false,
 			},
 			From_Time: {
-				type: Sequelize.TIME,
+				type: DataTypes.TIME,
 				allowNull: false,
 			},
 			To_Time: {
-				type: Sequelize.TIME,
+				type: DataTypes.TIME,
 				allowNull: false,
 			},
 			Is_Question_Navigation: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 				defaultValue: 0,
 			},
 			Is_Show_Response: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 				defaultValue: 0,
 			},
 			Is_Show_Explanation: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 				defaultValue: 0,
 			},
 			Status: {
-				type: Sequelize.ENUM('Active', 'In Active'),
+				type: DataTypes.ENUM('Active', 'In Active'),
 				allowNull: false,
 				defaultValue: 'Active',
 			},

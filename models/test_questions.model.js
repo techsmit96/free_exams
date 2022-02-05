@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Test_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Question_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 		},

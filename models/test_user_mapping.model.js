@@ -11,47 +11,47 @@ module.exports = (sequelize, DataTypes) => {
 				primaryKey: true,
 			},
 			Test_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			User_ID: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 			Questions: {
 				// question order ID show
-				type: Sequelize.STRING,
+				type: DataTypes.STRING,
 				allowNull: true,
 				defaultValue: '[]',
 			},
 			Option_Order: {
-				type: Sequelize.STRING,
+				type: DataTypes.STRING,
 				allowNull: true,
 				defaultValue: '[]',
 			},
 			Attempts: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: true,
 			},
 			Last_Attempt: {
-				type: Sequelize.DATE,
+				type: DataTypes.DATE,
 				allowNull: true,
 			},
 			Status: {
-				type: Sequelize.ENUM('Not Started', 'Started', 'Completed'),
+				type: DataTypes.ENUM('Not Started', 'Started', 'Completed'),
 				allowNull: false,
 				defaultValue: 'Not Started',
 			},
 			Remaining_Time: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: true,
 			},
 			Marks_Obtained: {
-				type: Sequelize.FLOAT,
+				type: DataTypes.FLOAT,
 				allowNull: true,
 			},
 			Marks_Out_Off: {
-				type: Sequelize.INTEGER,
+				type: DataTypes.INTEGER,
 				allowNull: true,
 			},
 		},
