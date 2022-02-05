@@ -2,7 +2,7 @@
 
 module.exports = (sequelize, DataTypes) => {
 	const model = sequelize.define(
-		'test_user_mapping',
+		'question_bank',
 		{
 			ID: {
 				type: DataTypes.INTEGER,
@@ -10,49 +10,63 @@ module.exports = (sequelize, DataTypes) => {
 				autoIncrement: true,
 				primaryKey: true,
 			},
-			Test_ID: {
+			Type: {
+				type: Sequelize.ENUM('Single', 'Multiple'),
+				allowNull: false,
+				defaultValue: 'Single',
+			},
+			Subject_ID: {
 				type: Sequelize.INTEGER,
 				allowNull: false,
 			},
-			User_ID: {
-				type: Sequelize.INTEGER,
+			Question: {
+				type: Sequelize.TEXT,
 				allowNull: false,
 			},
-			Questions: {
-				// question order ID show
+			Option_A: {
+				type: Sequelize.TEXT,
+				allowNull: true,
+			},
+			Option_B: {
+				type: Sequelize.TEXT,
+				allowNull: true,
+			},
+			Option_C: {
+				type: Sequelize.TEXT,
+				allowNull: true,
+			},
+			Option_D: {
+				type: Sequelize.TEXT,
+				allowNull: true,
+			},
+			Correct_Option: {
 				type: Sequelize.STRING,
 				allowNull: true,
-				defaultValue: '[]',
 			},
-			Option_Order: {
-				type: Sequelize.STRING,
+			Correct_Score: {
+				type: Sequelize.FLOAT,
+				allowNull: false,
+			},
+			Not_Attempt: {
+				type: Sequelize.FLOAT,
+				allowNull: false,
+			},
+			Wrong_Score: {
+				type: Sequelize.FLOAT,
+				allowNull: false,
+			},
+			Explanation: {
+				type: Sequelize.TEXT,
 				allowNull: true,
-				defaultValue: '[]',
 			},
-			Attempts: {
+			Difficulty_Level: {
 				type: Sequelize.INTEGER,
-				allowNull: true,
-			},
-			Last_Attempt: {
-				type: Sequelize.DATE,
-				allowNull: true,
+				allowNull: false,
 			},
 			Status: {
-				type: Sequelize.ENUM('Not Started', 'Started', 'Completed'),
+				type: Sequelize.ENUM('Active', 'In Active'),
 				allowNull: false,
-				defaultValue: 'Not Started',
-			},
-			Remaining_Time: {
-				type: Sequelize.INTEGER,
-				allowNull: true,
-			},
-			Marks_Obtained: {
-				type: Sequelize.FLOAT,
-				allowNull: true,
-			},
-			Marks_Out_Off: {
-				type: Sequelize.INTEGER,
-				allowNull: true,
+				defaultValue: 'Active',
 			},
 		},
 		{
